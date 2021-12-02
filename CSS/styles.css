@@ -19,6 +19,7 @@ html {
     --icons-bcg-color: #f5f4fa;
     --icons-social-color: #afb1b8;
     --icons-bcg-clients:#e5e5e5;
+    --icons-bcg-footer: rgba(255,255,255,0.1);
 }
 .container {   
     width: 1200px;
@@ -88,12 +89,20 @@ text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    fill: var(--primary-text-color);
 }
 .mail-icon:hover {
     color: var(--accent-color);
 
 }
- 
+.item:hover,
+.item:focus {
+    color: var(--accent-color);
+}
+.item:hover .mail-icon,
+.item:focus .mail-icon {
+    fill: var(--accent-color);
+} 
 .auth-nav .item + .item {margin-left: 50px;}
 .auth-nav a:hover, .auth-nav a:focus {color: var(--accent-color);}
 .nav-contacts {display: block;
@@ -164,6 +173,8 @@ text-align: center;
 }
 .button :hover, .button :focus { background-color: var(--accent-color);
     color: var(--primary-white-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 cursor: pointer;}
 .button-primary { border-radius: 4px; padding: 10px 32px; min-width: 200px;
 background-color: var(--accent-color); color: var(--primary-white-color);
@@ -197,7 +208,7 @@ line-height: 1.71;
 display: block;
 width: 270px; 
 }
-.textbox::before {
+/*.textbox::before {
     display: block;
     content: "";
     width: 270px;
@@ -214,7 +225,7 @@ width: 270px;
     padding-right: 100px;
 }
 .icon-details::before {
-    background-image: url(../images/icondetails.svg);
+    background-image: url(../images/symbol-defs.svg#icondetails);
     background-size: 70px;
 }
 .icon-time::before {
@@ -229,7 +240,7 @@ width: 270px;
 .icon-tech::before {
     background-image: url(../images/icontech.svg);
     background-size: 70px;
-}
+}*/
 .section-list {
     display: flex;
     align-items: stretch;
@@ -304,8 +315,13 @@ padding-bottom: 94px;}
 .list-element {
     width: 370px;
     margin-right: 30px;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;  
+}
+.list-element:hover, .list-element:focus {
+    box-sizing: border-box;
+    border: 1px solid #eeeeee;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
 }
 .list {
     margin-right: 30px;
@@ -315,6 +331,8 @@ padding-bottom: 94px;}
 }
 .cards {
     width: 270px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
     }
 .list-element:nth-child(3n) {margin-right: 0;}
 .list-element:nth-last-child(-n+3) {margin-bottom: 0;}
@@ -410,6 +428,10 @@ padding-bottom: 94px;}
     }
 .clients-list:hover,
 .clients-list:focus {
+            border-color: var(--accent-color);
+        }  
+.clients-list:hover .clients-icon,
+.clients-list:focus .clients-icon {
         border-color: var(--accent-color);
     }
 .clients-icon {
@@ -419,3 +441,62 @@ padding-bottom: 94px;}
 .clients-icon:focus {
     fill: var(--accent-color);
 }    
+
+.info-list {
+    display: flex;
+}
+.feature-icon-list {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--icons-bcg-color);
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-container {
+    display: block;
+}
+.container-info-list {
+    display: flex;
+}
+.footer-container + .footer-container {
+    margin-left: 70px;
+}
+.join-links {
+    margin-bottom: 20px;
+    color: var(--primary-white-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    }
+    .social-item-footer {
+        width: 44px;
+        height: 44px;
+    }
+    .social-link-footer {
+        width: 100%;
+        height: 100%;
+        background-color: var(--icons-bcg-footer);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+.social-link-footer:hover,
+.social-link-footer:focus {
+    background-color: var(--accent-color);
+}
+.social-item-footer + .social-item-footer {
+    margin-left: 10px;
+}
+.social-footer-icon {
+    fill: var(--primary-white-color);
+}
