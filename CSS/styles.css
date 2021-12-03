@@ -1,3 +1,4 @@
+/*body styles*/
 html {
     box-sizing: border-box;
 }
@@ -36,6 +37,9 @@ font-family: Roboto, sans-serif;
 font-weight: 400;
 letter-spacing: 0.03em;
 }
+
+/*header styles*/
+
 .page-header {
     border-bottom: 1px solid #ececec;
     }
@@ -91,10 +95,6 @@ text-decoration: none;
     justify-content: center;
     fill: var(--primary-text-color);
 }
-.mail-icon:hover {
-    color: var(--accent-color);
-
-}
 .item:hover,
 .item:focus {
     color: var(--accent-color);
@@ -103,6 +103,14 @@ text-decoration: none;
 .item:focus .mail-icon {
     fill: var(--accent-color);
 } 
+.mail-icon:hover,
+.mail-icon:focus {
+    fill: var(--accent-color);
+}
+.mail-icon:hover .item,
+.mail-icon:focus .item {
+    fill: var(--accent-color);
+}
 .auth-nav .item + .item {margin-left: 50px;}
 .auth-nav a:hover, .auth-nav a:focus {color: var(--accent-color);}
 .nav-contacts {display: block;
@@ -113,6 +121,9 @@ text-decoration: none;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;}
+
+    /* Hero section styles */
+
 .hero {max-width: 1600px;
     height: 600px;
     margin-left: auto;
@@ -186,6 +197,8 @@ letter-spacing: 0.06em;
 cursor: pointer;
 }
 
+/* Feature section styles */
+
 .section-feature-list h3 {
 margin-top: 0; 
 margin-bottom: 10px;   
@@ -208,39 +221,10 @@ line-height: 1.71;
 display: block;
 width: 270px; 
 }
-/*.textbox::before {
-    display: block;
-    content: "";
-    width: 270px;
-    height: 120px;
-    border-radius: 4px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--icons-bcg-color);
-    margin-bottom: 30px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-.icon-details::before {
-    background-image: url(../images/symbol-defs.svg#icondetails);
-    background-size: 70px;
-}
-.icon-time::before {
-    background-image: url(../images/icontime.svg);
-    background-size: 70px;
 
-}
-.icon-planning::before {
-    background-image: url(../images/iconplan.svg);
-    background-size: 70px;
-}
-.icon-tech::before {
-    background-image: url(../images/icontech.svg);
-    background-size: 70px;
-}*/
+
+/* Чем мы занимаемся section styles */
+
 .section-list {
     display: flex;
     align-items: stretch;
@@ -248,6 +232,9 @@ width: 270px;
 .list {
     display: flex;
 }
+
+/* Наша команда section styles */
+
 .section-cards h3 {
 font-weight: 500;
 font-size: 16px;
@@ -272,6 +259,9 @@ letter-spacing: 0.06em;}
        padding-top: 60px;
        padding-bottom: 60px;
    }
+
+   /* Footer styles */
+
 .footer-contacts {background-color: var(--secondary-bcg-color);}
 .footer-address {
         color: var(--primary-white-color);
@@ -475,7 +465,7 @@ padding-bottom: 94px;}
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    text-align: center;
+    
     }
     .social-item-footer {
         width: 44px;
@@ -490,8 +480,16 @@ padding-bottom: 94px;}
         align-items: center;
         justify-content: center;
     }
+.social-item-footer:hover,
+.social-item-footer:focus {
+    background-color: var(--accent-color);
+}    
 .social-link-footer:hover,
 .social-link-footer:focus {
+    background-color: var(--accent-color);
+}
+.social-link-footer:hover .social-footer-icon,
+.social-link-footer:focus .social-footer-icon {
     background-color: var(--accent-color);
 }
 .social-item-footer + .social-item-footer {
