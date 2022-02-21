@@ -111,11 +111,20 @@ text-decoration: none;
     justify-content: center;
     color: currentColor;
 }
+.nav-contacts {display: block;
+    margin-left: 10px;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;}
+.auth-nav .item + .item {margin-left: 50px;}   
 .item:hover,
 .item:focus {
     color: var(--accent-color);
 }
-.item:hover .mail-icon,
+/*.item:hover .mail-icon,
 .item:focus .mail-icon {
     fill: var(--accent-color);
 } 
@@ -127,22 +136,17 @@ text-decoration: none;
 .mail-icon:focus .item {
     fill: var(--accent-color);
 }
-.auth-nav .item + .item {margin-left: 50px;}
-.auth-nav:hover, .auth-nav:focus {color: var(--accent-color);}
-.nav-contacts {display: block;
-    margin-left: 10px;
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration: none;}
+
+.auth-nav:hover,
+.auth-nav:focus {color: var(--accent-color);}
+
 .nav-contacts:hover, .nav-contacts:focus {
     color: var(--accent-color);
 }
-.nav-contacts:hover .mail-icon, .nav-contacts:focus .mail-icon {
+.nav-contacts:hover .mail-icon,
+.nav-contacts:focus .mail-icon {
     color: var(--accent-color);
-}
+}*/
 
     /* ----------------------------HERO section styles---------------------------------------- */
 
@@ -442,6 +446,9 @@ text-align: center;
     padding-top: 94px;
     padding-bottom: 94px;
     }
+.clients-icon {
+        fill: var(--icons-social-color);
+    }    
 .clients-list:hover,
 .clients-list:focus {
             border-color: var(--accent-color);
@@ -450,9 +457,7 @@ text-align: center;
 .clients-list:focus .clients-icon {
         fill: var(--accent-color);
     }
-.clients-icon {
-    fill: var(--icons-social-color);
-}    
+
 .clients-icon:hover,
 .clients-icon:focus {
     fill: var(--accent-color);
@@ -460,8 +465,7 @@ text-align: center;
 .clients-icon:hover .clients-link,
 .clients-icon:focus .clients-link {
     fill: var(--accent-color);
-}
-
+}*/
 
 
 
